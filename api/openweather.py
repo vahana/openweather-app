@@ -15,7 +15,6 @@ class API():
             'units': self.settings.TEMP_UNITS,
             'appid': self.settings.OPEN_WEATHER_API_KEY,
         })
-        print(1111111111, self.settings)
 
     def process_response(self, resp):
         if not resp.ok:
