@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useStateValue } from './store';
 import { getWeather, updateWeather } from './reducers';
 
-const API_URL = 'http://0.0.0.0:6543'
+const API_URL = 'http://localhost:6543'
 
 function isUSAZipCode(str)
 {
