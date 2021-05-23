@@ -2,7 +2,7 @@
 
 Restful API that provides weather data. 
 
-Following are endpoints supported:
+Following are supported endpoints:
 * /_ - shows all endpoints
 * /zip - get weather by zipcode and country code
 * /geo - get weather by lat/lon coordinates
