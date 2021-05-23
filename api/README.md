@@ -1,5 +1,14 @@
 ## Weather API
 
+Restful API that provides weather data. 
+
+Following are endpoints supported:
+* /_ - shows all endpoints
+* /zip - get weather by zipcode and country code
+* /geo - get weather by lat/lon coordinates
+* /search - get weather by searching by place names
+
+
 ### setup
 * clone this repo
 * create virtual env
