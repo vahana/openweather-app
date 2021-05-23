@@ -1,0 +1,11 @@
+# Ignore React production build
+app/build
+
+# Ignore pycache
+api/__pycache__
+
+# Ignore auxillary files
+.idea
+.DS_Store
+.vscode
+*.pyc
