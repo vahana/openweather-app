@@ -1,11 +1,12 @@
 import logging
 import requests
+
 from slovar import slovar
 import prf.exc as prf_exc
 
+from cache import cache
+
 log = logging.getLogger(__name__)
-
-
 class API():
     def __init__(self, settings):
         self.settings = slovar(settings)
@@ -34,7 +35,6 @@ class API():
                 ])
             return data
 
-
     def get_by_zip(self, zip, country='us'):
         params = self.default_params.update({'zip':zip,'country':country})
         return self.process_response(requests.get(self.url, params=params))
@@ -43,6 +43,7 @@ class API():
         params = self.default_params.update({'lat':lat,'lon':lon})
         return self.process_response(requests.get(self.url, params=params))
 
+    @cache
     def search(self, q):
         params = self.default_params.update({'q': q})
         return self.process_response(requests.get(self.url, params=params))
